@@ -22,7 +22,7 @@ describe('Central de Atendimento ao cliente TAT', function () {
         cy.get('.success').should('be.visible')
     });
     
-    it('Validar mensagem de erro com email preenchido de forma inválida', () => {
+    it.only('Validar mensagem de erro com email preenchido de forma inválida', () => {
         cy.get('#firstName').type('Claudenor')
         cy.get('[name=lastName]').type('Dantas')
         cy.get('.field [name=email]').type('cdoutlook.com')
@@ -142,7 +142,7 @@ describe('Central de Atendimento ao cliente TAT', function () {
     });
 
     //cypress não trabalha com multi abas
-    it('Verificar que a política de privacidade abre en outra aba sem a necessidade de um clique', () => {
+    it('Verificar que a política de privacidade abre em outra aba sem a necessidade de um clique', () => {
         cy.get('#privacy a').should('have.attr', 'target', '_blank')
     });
     it('Acessar a página de política de privacidade removendo o target e clicando no link', () => {
