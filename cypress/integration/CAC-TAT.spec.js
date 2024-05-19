@@ -22,7 +22,7 @@ describe('Central de Atendimento ao cliente TAT', function () {
         cy.get('.success').should('be.visible')
     });
     
-    it.only('Validar mensagem de erro com email preenchido de forma inválida', () => {
+    it('Validar mensagem de erro com email preenchido de forma inválida', () => {
         cy.get('#firstName').type('Claudenor')
         cy.get('[name=lastName]').type('Dantas')
         cy.get('.field [name=email]').type('cdoutlook.com')
