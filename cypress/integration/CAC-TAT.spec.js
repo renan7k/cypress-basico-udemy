@@ -47,7 +47,7 @@ describe('Central de Atendimento ao cliente TAT', function () {
         cy.get('.error').should('be.visible')
     });
     it('Preenche e limpa os campos', () => {
-        cy.get('#name')
+        cy.get('#firstName')
             .type('Claudenor')
             .should('have.value','Claudenor')
             .clear()
